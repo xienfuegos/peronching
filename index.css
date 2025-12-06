@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Zen+Dots&display=swap');
+
+@theme {
+    --color-void-black: #050505;
+    --color-neon-red: #ff2a6d;
+    --color-cyber-gold: #ffd700;
+    --color-hologram-blue: #05d9e8;
+    --color-midnight-blue: #020024;
+
+    --font-oswald: "Oswald", sans-serif;
+    --font-zen: "Zen Dots", cursive;
+
+    --animate-spin-slow: spin 8s linear infinite;
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-pulse-glow: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes pulse-glow {
+
+        0%,
+        100% {
+            opacity: 1;
+            box-shadow: 0 0 20px #05d9e8;
+        }
+
+        50% {
+            opacity: 0.5;
+            box-shadow: 0 0 10px #05d9e8;
+        }
+    }
+}
+
+/* Base styles reusing the theme variables */
+@layer base {
+    body {
+        background-color: var(--color-void-black);
+        color: white;
+        overflow-x: hidden;
+        background-image: radial-gradient(circle at 50% 50%, #020024 0%, #050505 100%);
+        min-height: 100vh;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #050505;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #ff2a6d;
+    }
+}
+
+@layer utilities {
+    .text-shadow-neon {
+        text-shadow: 0 0 5px #05d9e8, 0 0 10px #05d9e8, 0 0 20px #05d9e8;
+    }
+
+    .box-shadow-neon {
+        box-shadow: 0 0 10px #05d9e8, 0 0 20px #05d9e8;
+    }
+
+    .glass-card {
+        background-color: rgba(255, 255, 255, 0.05);
+        /* white/5 */
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    }
+}
