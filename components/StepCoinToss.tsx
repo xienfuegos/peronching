@@ -19,7 +19,7 @@ const Coin3D = ({ animating, delay }: { animating: boolean; delay: string }) => 
       {/* Coin Face Front */}
       <div className="absolute inset-0 rounded-full border-[2px] border-[#B8860B] flex items-center justify-center backface-hidden shadow-xl overflow-hidden bg-black">
         {/* Generated Texture */}
-        <img src="/coin_texture.png" alt="Moneda" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/coin_texture_v2.png" alt="Moneda" className="absolute inset-0 w-full h-full object-cover" />
 
         {/* Shine */}
         <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white/30 via-transparent to-black/20 pointer-events-none z-30" />
@@ -31,7 +31,7 @@ const Coin3D = ({ animating, delay }: { animating: boolean; delay: string }) => 
         style={{ transform: 'rotateY(180deg)' }}
       >
         {/* Generated Texture */}
-        <img src="/coin_texture.png" alt="Moneda" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/coin_texture_v2.png" alt="Moneda" className="absolute inset-0 w-full h-full object-cover" />
 
         {/* Shine */}
         <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white/30 via-transparent to-black/20 pointer-events-none z-30" />
